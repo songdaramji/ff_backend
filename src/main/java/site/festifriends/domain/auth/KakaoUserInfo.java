@@ -12,9 +12,10 @@ public class KakaoUserInfo {
     private String profileImage;
 
     public KakaoUserInfo(JsonNode userInfo) {
-        this.socialId = userInfo.get("id").asText();
-        this.name = userInfo.get("properties").get("nickname").asText();
-        this.email = userInfo.get("kakao_account").get("email").asText();
-        this.profileImage = userInfo.get("properties").get("profile_image").asText();
+        this.socialId = userInfo.path("id").asText();
+        this.name = userInfo.path("properties").path("nickname").asText("카카오 사용자");
+        this.email = userInfo.path("kakao_account").path("email")
+            .asText("kakao-" + socialId + "@users.festifriends.local");
+        this.profileImage = userInfo.path("properties").path("profile_image").asText(null);
     }
 }
