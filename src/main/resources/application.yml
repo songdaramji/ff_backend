@@ -62,8 +62,7 @@ app:
     year: ${PERFORMANCE_IMPORT_YEAR:2026}
     cron: ${PERFORMANCE_IMPORT_CRON:0 30 3 * * *}
     kopis-service-key: ${KOPIS_SERVICE_KEY:}
-    spotify-client-id: ${SPOTIFY_CLIENT_ID:}
-    spotify-client-secret: ${SPOTIFY_CLIENT_SECRET:}
+    musicbrainz-user-agent: ${MUSICBRAINZ_USER_AGENT:FestiFriends/1.0 (https://festifriends.vercel.app)}
     rock-genres: ${ROCK_GENRES:rock,metal,punk,grunge,shoegaze,emo,hardcore}
 
 management:

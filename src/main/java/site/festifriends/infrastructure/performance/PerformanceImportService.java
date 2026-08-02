@@ -23,15 +23,15 @@ public class PerformanceImportService {
     private static final DateTimeFormatter KOPIS_DATE = DateTimeFormatter.ofPattern("yyyy.MM.dd");
 
     private final KopisClient kopisClient;
-    private final SpotifyClient spotifyClient;
+    private final MusicBrainzClient musicBrainzClient;
     private final PerformanceRepository performanceRepository;
 
     @Value("${app.performance-import.rock-genres}")
     private String rockGenres;
 
     public ImportResult importYear(int year) {
-        if (!kopisClient.configured() || !spotifyClient.configured()) {
-            throw new IllegalStateException("KOPIS_SERVICE_KEY and Spotify credentials are required");
+        if (!kopisClient.configured()) {
+            throw new IllegalStateException("KOPIS_SERVICE_KEY is required");
         }
         int scanned = 0;
         int rock = 0;
@@ -66,11 +66,11 @@ public class PerformanceImportService {
             .map(String::trim).filter(value -> !value.isBlank()).toList();
         for (String artist : cast) {
             try {
-                if (spotifyClient.findArtistGenres(artist).stream()
+                if (musicBrainzClient.findArtistGenres(artist).stream()
                     .map(genre -> genre.toLowerCase(Locale.ROOT))
                     .anyMatch(genre -> keywords.stream().anyMatch(genre::contains))) return true;
             } catch (Exception e) {
-                log.warn("Spotify artist lookup failed. artist={}", artist, e);
+                log.warn("MusicBrainz artist lookup failed. artist={}", artist, e);
             }
         }
         return false;
