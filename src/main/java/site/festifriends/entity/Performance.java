@@ -36,6 +36,14 @@ public class Performance extends SoftDeleteEntity {
     @Column(name = "performance_id", nullable = false)
     private Long id;
 
+    @Column(name = "kopis_id", unique = true, length = 20)
+    @Comment("KOPIS 공연 ID")
+    private String kopisId;
+
+    @Column(name = "genre", length = 100)
+    @Comment("KOPIS 공연 장르")
+    private String genre;
+
     @Column(name = "title", nullable = false)
     @Comment("공연명")
     private String title;
@@ -134,11 +142,13 @@ public class Performance extends SoftDeleteEntity {
     private List<PerformanceImage> imgs = new ArrayList<>();
 
     @Builder
-    public Performance(String title, LocalDateTime startDate, LocalDateTime endDate, String location,
+    public Performance(String kopisId, String genre, String title, LocalDateTime startDate, LocalDateTime endDate, String location,
         List<String> cast, List<String> crew, String runtime, String age,
         List<String> productionCompany, List<String> agency, List<String> host,
         List<String> organizer, List<String> price, String poster,
         PerformanceState state, String visit, List<String> time) {
+        this.kopisId = kopisId;
+        this.genre = genre;
         this.title = title;
         this.startDate = startDate;
         this.endDate = endDate;
@@ -172,9 +182,17 @@ public class Performance extends SoftDeleteEntity {
         if (time != null) {
             this.time = time;
         }
-        if (imgs != null) {
-            this.imgs = imgs;
+    }
+
+    public void addImage(String src, String alt) {
+        if (src == null || src.isBlank()) {
+            return;
         }
+        this.imgs.add(PerformanceImage.builder()
+            .performance(this)
+            .src(src)
+            .alt(alt)
+            .build());
     }
 
     public void updateState() {
