@@ -1,17 +1,18 @@
 package site.festifriends.infrastructure.performance;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.Year;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import site.festifriends.domain.performance.repository.PerformanceRepository;
 import site.festifriends.entity.Performance;
 import site.festifriends.entity.enums.PerformanceState;
@@ -20,78 +21,59 @@ import site.festifriends.entity.enums.PerformanceState;
 @Service
 @RequiredArgsConstructor
 public class PerformanceImportService {
-    private static final DateTimeFormatter KOPIS_DATE = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+    private static final DateTimeFormatter SEED_DATE = DateTimeFormatter.ofPattern("yyyy.MM.dd");
 
-    private final KopisClient kopisClient;
-    private final SpotifyClient spotifyClient;
+    private final ObjectMapper objectMapper;
     private final PerformanceRepository performanceRepository;
 
-    @Value("${app.performance-import.rock-genres}")
-    private String rockGenres;
-
+    /**
+     * Imports the curated local seed without calling KOPIS or Spotify.
+     * The generated kopisId is unique, so repeated application starts are idempotent.
+     */
+    @Transactional
     public ImportResult importYear(int year) {
-        if (!kopisClient.configured() || !spotifyClient.configured()) {
-            throw new IllegalStateException("KOPIS_SERVICE_KEY and Spotify credentials are required");
-        }
-        int scanned = 0;
-        int rock = 0;
+        List<SeedPerformance> items = readSeed(year);
         int saved = 0;
-        LocalDate cursor = Year.of(year).atDay(1);
-        LocalDate lastDay = Year.of(year).atMonth(12).atEndOfMonth();
-
-        while (!cursor.isAfter(lastDay)) {
-            LocalDate rangeEnd = cursor.plusDays(30);
-            if (rangeEnd.isAfter(lastDay)) rangeEnd = lastDay;
-            List<String> ids = kopisClient.findPopularMusicIds(cursor, rangeEnd);
-            for (String id : ids) {
-                scanned++;
-                if (performanceRepository.findByKopisId(id).isPresent()) continue;
-                try {
-                    KopisPerformance item = kopisClient.getDetail(id);
-                    if (!isRock(item.cast())) continue;
-                    rock++;
-                    performanceRepository.save(toEntity(item));
-                    saved++;
-                } catch (Exception e) {
-                    log.warn("KOPIS performance import failed. id={}", id, e);
-                }
+        for (SeedPerformance item : items) {
+            if (performanceRepository.findByKopisId(item.kopisId()).isPresent()) {
+                continue;
             }
-            cursor = rangeEnd.plusDays(1);
+            Performance entity = toEntity(item);
+            performanceRepository.save(entity);
+            saved++;
         }
-        return new ImportResult(scanned, rock, saved);
+        return new ImportResult(items.size(), items.size(), saved);
     }
 
-    private boolean isRock(List<String> cast) {
-        List<String> keywords = Arrays.stream(rockGenres.toLowerCase(Locale.ROOT).split(","))
-            .map(String::trim).filter(value -> !value.isBlank()).toList();
-        for (String artist : cast) {
-            try {
-                if (spotifyClient.findArtistGenres(artist).stream()
-                    .map(genre -> genre.toLowerCase(Locale.ROOT))
-                    .anyMatch(genre -> keywords.stream().anyMatch(genre::contains))) return true;
-            } catch (Exception e) {
-                log.warn("Spotify artist lookup failed. artist={}", artist, e);
-            }
+    private List<SeedPerformance> readSeed(int year) {
+        ClassPathResource resource = new ClassPathResource("seed/performances-" + year + ".json");
+        if (!resource.exists()) {
+            throw new IllegalStateException("Performance seed not found for year " + year);
         }
-        return false;
+        try (var input = resource.getInputStream()) {
+            return objectMapper.readValue(input, new TypeReference<>() { });
+        } catch (IOException e) {
+            throw new IllegalStateException("Failed to read performance seed for year " + year, e);
+        }
     }
 
-    private Performance toEntity(KopisPerformance source) {
-        LocalDate start = LocalDate.parse(source.startDate(), KOPIS_DATE);
-        LocalDate end = LocalDate.parse(source.endDate(), KOPIS_DATE);
+    private Performance toEntity(SeedPerformance source) {
+        LocalDate start = LocalDate.parse(source.startDate(), SEED_DATE);
+        LocalDate end = LocalDate.parse(source.endDate(), SEED_DATE);
         Performance entity = Performance.builder()
-            .kopisId(source.id()).genre(source.genre()).title(source.title())
+            .kopisId(source.kopisId()).genre(source.genre()).title(source.title())
             .startDate(LocalDateTime.of(start, LocalTime.MIN))
             .endDate(LocalDateTime.of(end, LocalTime.MAX))
             .location(source.location()).cast(source.cast()).crew(source.crew())
             .runtime(source.runtime()).age(source.age())
             .productionCompany(source.productionCompany()).agency(source.agency())
             .host(source.host()).organizer(source.organizer()).price(source.price())
-            .poster(source.poster()).state(state(start, end))
-            .visit("Y".equalsIgnoreCase(source.visit()) ? "내한" : "국내")
+            .poster(source.poster()).state(state(start, end)).visit(source.visit())
             .time(source.time()).build();
         int index = 1;
-        for (String image : source.images()) entity.addImage(image, source.title() + " 소개 이미지 " + index++);
+        for (String image : source.images()) {
+            entity.addImage(image, source.title() + " 소개 이미지 " + index++);
+        }
         return entity;
     }
 
@@ -103,4 +85,12 @@ public class PerformanceImportService {
     }
 
     public record ImportResult(int scanned, int rock, int saved) { }
+
+    private record SeedPerformance(
+        String kopisId, String genre, String title, String startDate, String endDate,
+        String location, List<String> cast, List<String> crew, String runtime, String age,
+        List<String> productionCompany, List<String> agency, List<String> host,
+        List<String> organizer, List<String> price, String poster, String visit,
+        List<String> time, List<String> images
+    ) { }
 }
