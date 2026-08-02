@@ -28,8 +28,8 @@ public class PerformanceImportScheduler {
         if (!enabled) return;
         try {
             var result = importService.importYear(year);
-            log.info("Local performance seed import complete. year={}, scanned={}, rock={}, saved={}",
-                year, result.scanned(), result.rock(), result.saved());
+            log.info("Local performance seed import complete. year={}, scanned={}, rock={}, saved={}, updated={}",
+                year, result.scanned(), result.rock(), result.saved(), result.updated());
         } catch (Exception e) {
             log.error("Local performance seed import failed. year={}", year, e);
         }

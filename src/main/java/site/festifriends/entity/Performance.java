@@ -206,4 +206,10 @@ public class Performance extends SoftDeleteEntity {
             this.state = PerformanceState.ONGOING;
         }
     }
+
+    public void updateSeedDefaults(String runtime, String age, String poster) {
+        this.runtime = runtime;
+        this.age = age;
+        this.poster = poster;
+    }
 }

@@ -34,15 +34,19 @@ public class PerformanceImportService {
     public ImportResult importYear(int year) {
         List<SeedPerformance> items = readSeed(year);
         int saved = 0;
+        int updated = 0;
         for (SeedPerformance item : items) {
-            if (performanceRepository.findByKopisId(item.kopisId()).isPresent()) {
+            var existing = performanceRepository.findByKopisId(item.kopisId());
+            if (existing.isPresent()) {
+                existing.get().updateSeedDefaults(item.runtime(), item.age(), item.poster());
+                updated++;
                 continue;
             }
             Performance entity = toEntity(item);
             performanceRepository.save(entity);
             saved++;
         }
-        return new ImportResult(items.size(), items.size(), saved);
+        return new ImportResult(items.size(), items.size(), saved, updated);
     }
 
     private List<SeedPerformance> readSeed(int year) {
@@ -84,7 +88,7 @@ public class PerformanceImportService {
         return PerformanceState.ONGOING;
     }
 
-    public record ImportResult(int scanned, int rock, int saved) { }
+    public record ImportResult(int scanned, int rock, int saved, int updated) { }
 
     private record SeedPerformance(
         String kopisId, String genre, String title, String startDate, String endDate,

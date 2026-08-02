@@ -8,8 +8,8 @@
     "location": "서호잔디광장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재) 경기콘텐츠진흥원"
     ],
@@ -21,7 +21,7 @@
       "수원특례시, (재) 경기콘텐츠진흥원"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -35,8 +35,8 @@
     "location": "세종중앙공원 / 도시축제마당",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재) 세종시문화관광재단(세종문화예술회관)"
     ],
@@ -48,7 +48,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -62,8 +62,8 @@
     "location": "호텔 인터불고 엑스코 / 헤븐리풀",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)미래사회"
     ],
@@ -75,7 +75,7 @@
       "클럽 브리드"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -89,8 +89,8 @@
     "location": "함덕해수욕장 / 특설무대",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)이다"
     ],
@@ -100,7 +100,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -114,8 +114,8 @@
     "location": "아트스페이스 흥학관",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [
       "광주 아트 컬렉티브(Gwangju Arts Collective)"
@@ -127,7 +127,7 @@
       "광주소극장축제 집행위원회"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -141,8 +141,8 @@
     "location": "파주 임진각 평화누리 / 야외공연장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -152,7 +152,7 @@
       "경기관광공사, (주)경기일보"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -166,8 +166,8 @@
     "location": "파라다이스시티 / 컬처파크 (야외)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)원유니버스스튜디오(One Universe Studio Co., Ltd.)"
     ],
@@ -179,7 +179,7 @@
       "리브위드(LIVEWITH), (주)플럭스소닉(FLUXSONIC)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -193,8 +193,8 @@
     "location": "KBS홀 [부산]",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)로드쇼엔터테인먼트"
     ],
@@ -208,7 +208,7 @@
       "(주)공연마루"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -222,8 +222,8 @@
     "location": "수성아트피아 / 소극장 (소공연장)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재)수성문화재단 수성아트피아"
     ],
@@ -235,7 +235,7 @@
       "(재)수성문화재단 수성아트피아"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -249,8 +249,8 @@
     "location": "천마아트센터 / 그랜드홀",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)로드쇼엔터테인먼트"
     ],
@@ -264,7 +264,7 @@
       "(주)공연마루"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -278,8 +278,8 @@
     "location": "수성아트피아 / 소극장 (소공연장)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재)수성문화재단 수성아트피아"
     ],
@@ -291,7 +291,7 @@
       "(재)수성문화재단 수성아트피아"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -305,8 +305,8 @@
     "location": "수성아트피아 / 소극장 (소공연장)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재)수성문화재단 수성아트피아"
     ],
@@ -318,7 +318,7 @@
       "(재)수성문화재단 수성아트피아"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -332,8 +332,8 @@
     "location": "올림픽공원 / 올림픽홀",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)로드쇼엔터테인먼트"
     ],
@@ -345,7 +345,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -359,8 +359,8 @@
     "location": "경기아트센터(구. 경기도문화의전당) / 소극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재)경기아트센터"
     ],
@@ -370,7 +370,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -384,8 +384,8 @@
     "location": "서울랜드 / 피크닉광장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)비이피씨탄젠트"
     ],
@@ -395,7 +395,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -409,8 +409,8 @@
     "location": "삼락생태공원",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(사) 부산축제조직위원회"
     ],
@@ -422,7 +422,7 @@
       "(사) 부산축제조직위원회"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -436,8 +436,8 @@
     "location": "경기아트센터(구. 경기도문화의전당) / 소극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재)경기아트센터"
     ],
@@ -449,7 +449,7 @@
       "(재)경기아트센터"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -463,8 +463,8 @@
     "location": "하우스오브베르 / 공연장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -474,7 +474,7 @@
       "하우스 오브 베르(House of vert)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -488,8 +488,8 @@
     "location": "인천문화예술회관 / 대공연장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)창라이프"
     ],
@@ -501,7 +501,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -515,8 +515,8 @@
     "location": "인천문화예술회관 / 대공연장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)더화랑이엔티"
     ],
@@ -530,7 +530,7 @@
       "(주)더화랑이엔티"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -544,8 +544,8 @@
     "location": "어울아트센터(구. 대구북구문예회관) / 함지홀(대공연장)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재)행복북구문화재단(어울아트센터)"
     ],
@@ -557,7 +557,7 @@
       "(재)행복북구문화재단(어울아트센터)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -571,8 +571,8 @@
     "location": "어울아트센터(구. 대구북구문예회관) / 함지홀(대공연장)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재)행복북구문화재단(어울아트센터)"
     ],
@@ -584,7 +584,7 @@
       "(재)행복북구문화재단(어울아트센터)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -598,8 +598,8 @@
     "location": "링크원스테이지(LINK ONE STAGE)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "아티카 컴퍼니(ARTICA COMPANY)"
     ],
@@ -611,7 +611,7 @@
       "아티카 컴퍼니(ARTICA COMPANY)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -625,8 +625,8 @@
     "location": "전주대학교 / 축구장(인조잔디구장)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "전주문화방송(전주MBC)"
     ],
@@ -638,7 +638,7 @@
       "전주문화방송(전주MBC)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -652,8 +652,8 @@
     "location": "문기타, 문씨어터 [진주] / 문씨어터",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -661,7 +661,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -675,8 +675,8 @@
     "location": "울산중구문화의전당 / 함월홀 (2층)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -684,7 +684,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -698,8 +698,8 @@
     "location": "수성못 상화동산",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "대구MBC"
     ],
@@ -711,7 +711,7 @@
       "대구MBC"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -725,8 +725,8 @@
     "location": "KT&G 상상마당 라이브홀 [마포]",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -736,7 +736,7 @@
       "이모이즈포러버스(Emo is for Lovers)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -750,8 +750,8 @@
     "location": "마포아트센터 / 플레이맥",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "샘스뮤직컴퍼니(Sam’s Music Company)"
     ],
@@ -763,7 +763,7 @@
       "샘스뮤직컴퍼니(Sam’s Music Company), SMUNM 에스엠유 뉴음"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -777,8 +777,8 @@
     "location": "인천문학경기장 / 주경기장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주) 에이오디(AOD)"
     ],
@@ -790,7 +790,7 @@
       "사운드얼라이언스 (Sound Alliance)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -804,8 +804,8 @@
     "location": "태화강 국가정원 (남구둔치) / 태화강 국가정원",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주) 울산문화방송"
     ],
@@ -817,7 +817,7 @@
       "(주) 울산문화방송"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -831,14 +831,14 @@
     "location": "노동당사 / 옆 뜰",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -852,8 +852,8 @@
     "location": "우무지",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(사) 코드(우무지)"
     ],
@@ -865,7 +865,7 @@
       "(사) 코드(우무지)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -879,8 +879,8 @@
     "location": "국립극장 / 달오름극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -888,7 +888,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -902,8 +902,8 @@
     "location": "국립극장 / 달오름극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "국립극장"
     ],
@@ -915,7 +915,7 @@
       "국립극장"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -929,8 +929,8 @@
     "location": "부산아시아드 경기장 / 부산아시아드 주경기장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)에스엠컬처앤콘텐츠(S.M.Culture&Contents)"
     ],
@@ -942,7 +942,7 @@
       "부산관광공사, (주)에스엠컬처앤콘텐츠(S.M.Culture&Contents)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -956,8 +956,8 @@
     "location": "국립극장 / 달오름극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "국립극장"
     ],
@@ -969,7 +969,7 @@
       "국립극장"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -983,8 +983,8 @@
     "location": "국립극장 / 하늘극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -992,7 +992,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1006,8 +1006,8 @@
     "location": "파라다이스시티 / 컬처파크 (야외)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주) 에이피에프컴퍼니(APF COMPANY)"
     ],
@@ -1019,7 +1019,7 @@
       "(주) 에이피에프컴퍼니(APF COMPANY)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1033,8 +1033,8 @@
     "location": "송도달빛축제공원",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)경기일보"
     ],
@@ -1046,7 +1046,7 @@
       "인천관광공사, (주)경기일보"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1060,8 +1060,8 @@
     "location": "달서아트센터 (구. 웃는얼굴아트센터) / 청룡홀",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재)달서문화재단 (웃는얼굴아트센터, 달서아트센터)"
     ],
@@ -1073,7 +1073,7 @@
       "(재)달서문화재단 (웃는얼굴아트센터, 달서아트센터)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1087,8 +1087,8 @@
     "location": "칠포해수욕장 / 야외특설무대",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(사)칠포재즈축제위원회"
     ],
@@ -1100,7 +1100,7 @@
       "(사)칠포재즈축제위원회"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1114,14 +1114,14 @@
     "location": "한국문화테마파크 / 전통극 극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1135,8 +1135,8 @@
     "location": "무신사 개러지 (구. 왓챠홀)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "29CM CULTURE"
     ],
@@ -1146,7 +1146,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1160,8 +1160,8 @@
     "location": "무신사 개러지 (구. 왓챠홀)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "29CM CULTURE"
     ],
@@ -1171,7 +1171,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1185,8 +1185,8 @@
     "location": "생기 스튜디오",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -1196,7 +1196,7 @@
       "이모이즈포러버스(Emo is for Lovers)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1210,8 +1210,8 @@
     "location": "파라다이스시티 / 컬처파크 (야외)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "롤링홀"
     ],
@@ -1223,7 +1223,7 @@
       "롤링홀"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1237,8 +1237,8 @@
     "location": "로라뮤직-바인홀",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -1248,7 +1248,7 @@
       "로라뮤직 (구. (사) 현대음악발전협회)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1262,8 +1262,8 @@
     "location": "올림픽공원 / 일대",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)프라이빗커브"
     ],
@@ -1275,7 +1275,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1289,8 +1289,8 @@
     "location": "고려대학교 화정체육관 / 주경기장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)크래프톤 (krafton)"
     ],
@@ -1302,7 +1302,7 @@
       "(주)엠씨피 이씨씨 MCP ECC, (주)숲(SOOP) (구. (주)아프리카TV)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1316,8 +1316,8 @@
     "location": "올림픽공원 / 야외(88잔디마당)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)비이피씨탄젠트"
     ],
@@ -1329,7 +1329,7 @@
       "(주)비이피씨탄젠트"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1343,8 +1343,8 @@
     "location": "고석정",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(사)피스트레인"
     ],
@@ -1356,7 +1356,7 @@
       "(사)피스트레인"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1370,8 +1370,8 @@
     "location": "청남대",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "CJB청주방송"
     ],
@@ -1383,7 +1383,7 @@
       "청주시청, CJB청주방송"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1397,8 +1397,8 @@
     "location": "진해공설운동장 / 운동장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주) 이디아"
     ],
@@ -1410,7 +1410,7 @@
       "(주) 이디아"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1424,8 +1424,8 @@
     "location": "난지한강공원",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "Culture Factory (컬쳐 팩토리)"
     ],
@@ -1437,7 +1437,7 @@
       "Culture Factory (컬쳐 팩토리)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1451,8 +1451,8 @@
     "location": "문화비축기지 / 문화마당",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)퀸엔터테인먼트, (사) 리본디어스(Reborn The Earth)"
     ],
@@ -1464,7 +1464,7 @@
       "(주)퀸엔터테인먼트, (사) 리본디어스(Reborn The Earth)"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1478,8 +1478,8 @@
     "location": "GS아트센터",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(재) GS문화재단"
     ],
@@ -1489,7 +1489,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1503,8 +1503,8 @@
     "location": "KT&G 상상마당 [춘천] / 야외공연장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "컴퍼니에스에스(주)춘천아트센터"
     ],
@@ -1516,7 +1516,7 @@
       "KT&G 상상마당"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1530,8 +1530,8 @@
     "location": "낙동아트센터 / 앙상블극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "낙동아트센터"
     ],
@@ -1541,7 +1541,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1555,8 +1555,8 @@
     "location": "크레디아 클래식 클럽 / STUDIO (B1)",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "크레디아클래식클럽 (credia classic club)"
     ],
@@ -1566,7 +1566,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1580,8 +1580,8 @@
     "location": "진해공설운동장 / 운동장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주) 이디아"
     ],
@@ -1593,7 +1593,7 @@
       "(주) 이디아"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1607,8 +1607,8 @@
     "location": "지산포레스트리조트",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "(주)Master Plan Music Group(MPMG, 엠피엠지)"
     ],
@@ -1620,7 +1620,7 @@
       "민트페이퍼, (주) 더그루브코리아"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1634,8 +1634,8 @@
     "location": "대덕문화전당",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "이즈뮤직(이즈실용음악학원)"
     ],
@@ -1645,7 +1645,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1659,8 +1659,8 @@
     "location": "대구문화예술회관 / 비슬홀",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "대구문화예술회관"
     ],
@@ -1672,7 +1672,7 @@
       "대구문화예술회관"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1686,8 +1686,8 @@
     "location": "대구문화예술회관 / 비슬홀",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "대구문화예술회관"
     ],
@@ -1699,7 +1699,7 @@
       "대구문화예술회관"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1713,8 +1713,8 @@
     "location": "이천아트홀 / 소공연장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "더탑종합예술아카데미"
     ],
@@ -1724,7 +1724,7 @@
     ],
     "organizer": [],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1738,8 +1738,8 @@
     "location": "KT&G 상상마당 라이브홀 [마포]",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "컴퍼니에스에스(주)"
     ],
@@ -1751,7 +1751,7 @@
       "KT&G 상상마당"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1765,8 +1765,8 @@
     "location": "KT&G 상상마당 라이브홀 [마포]",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "KT&G 상상마당"
     ],
@@ -1778,7 +1778,7 @@
       "KT&G 상상마당"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1792,8 +1792,8 @@
     "location": "KT&G 상상마당 라이브홀 [마포]",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "KT&G 상상마당"
     ],
@@ -1805,7 +1805,7 @@
       "KT&G 상상마당"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1819,8 +1819,8 @@
     "location": "낙동아트센터 / 앙상블극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [],
     "agency": [],
     "host": [
@@ -1830,7 +1830,7 @@
       "낙동아트센터"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1844,8 +1844,8 @@
     "location": "낙동아트센터 / 앙상블극장",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "낙동아트센터"
     ],
@@ -1857,7 +1857,7 @@
       "무지개공장, 낙동아트센터"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
@@ -1871,8 +1871,8 @@
     "location": "KT&G 상상마당 라이브홀 [마포]",
     "cast": [],
     "crew": [],
-    "runtime": null,
-    "age": null,
+    "runtime": "공연 시간 미정",
+    "age": "전체 관람가",
     "productionCompany": [
       "컴퍼니에스에스(주)"
     ],
@@ -1884,7 +1884,7 @@
       "KT&G 상상마당"
     ],
     "price": [],
-    "poster": null,
+    "poster": "/og-image.jpg",
     "visit": "국내",
     "time": [],
     "images": []
