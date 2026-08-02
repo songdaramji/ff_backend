@@ -63,7 +63,7 @@ public class MemberService {
         if (member == null) {
             String image = userInfo.getProfileImage();
 
-            image = image.equals(DEFAULT_PROFILE_IMAGE_URL) ? null : image;
+            image = DEFAULT_PROFILE_IMAGE_URL.equals(image) ? null : image;
 
             Member newMember = memberRepository.save(Member.builder()
                 .socialId(userInfo.getSocialId())
