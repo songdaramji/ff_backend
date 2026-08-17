@@ -1,8 +1,5 @@
 package site.festifriends.infrastructure.performance;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -10,7 +7,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import site.festifriends.domain.performance.repository.PerformanceRepository;
@@ -23,49 +19,53 @@ import site.festifriends.entity.enums.PerformanceState;
 public class PerformanceImportService {
     private static final DateTimeFormatter SEED_DATE = DateTimeFormatter.ofPattern("yyyy.MM.dd");
 
-    private final ObjectMapper objectMapper;
+    private final KopisClient kopisClient;
     private final PerformanceRepository performanceRepository;
 
-    /**
-     * Imports the curated local seed without calling KOPIS or Spotify.
-     * The generated kopisId is unique, so repeated application starts are idempotent.
-     */
     @Transactional
     public ImportResult importYear(int year) {
-        List<SeedPerformance> items = readSeed(year);
+        if (!kopisClient.configured()) {
+            throw new IllegalStateException("KOPIS_SERVICE_KEY is not configured");
+        }
+
+        LocalDate cursor = LocalDate.of(year, 1, 1);
+        LocalDate yearEnd = LocalDate.of(year, 12, 31);
+        int scanned = 0;
+        int matched = 0;
         int saved = 0;
         int updated = 0;
-        for (SeedPerformance item : items) {
-            var existing = performanceRepository.findByKopisId(item.kopisId());
-            if (existing.isPresent()) {
-                existing.get().updateSeedDefaults(item.runtime(), item.age(), item.poster());
-                updated++;
-                continue;
+
+        while (!cursor.isAfter(yearEnd)) {
+            LocalDate chunkEnd = cursor.plusDays(30);
+            if (chunkEnd.isAfter(yearEnd)) chunkEnd = yearEnd;
+
+            List<String> ids = kopisClient.findMatchingIds(cursor, chunkEnd);
+            scanned += ids.size();
+            for (String id : ids) {
+                KopisPerformance item = kopisClient.getDetail(id);
+                if (!item.title().contains("페스티벌") || !"대중음악".equals(item.genre())) {
+                    continue;
+                }
+                matched++;
+                var existing = performanceRepository.findByKopisId(item.id());
+                if (existing.isPresent()) {
+                    existing.get().updateSeedDefaults(item.runtime(), item.age(), item.poster());
+                    updated++;
+                    continue;
+                }
+                performanceRepository.save(toEntity(item));
+                saved++;
             }
-            Performance entity = toEntity(item);
-            performanceRepository.save(entity);
-            saved++;
+            cursor = chunkEnd.plusDays(1);
         }
-        return new ImportResult(items.size(), items.size(), saved, updated);
+        return new ImportResult(scanned, matched, saved, updated);
     }
 
-    private List<SeedPerformance> readSeed(int year) {
-        ClassPathResource resource = new ClassPathResource("seed/performances-" + year + ".json");
-        if (!resource.exists()) {
-            throw new IllegalStateException("Performance seed not found for year " + year);
-        }
-        try (var input = resource.getInputStream()) {
-            return objectMapper.readValue(input, new TypeReference<>() { });
-        } catch (IOException e) {
-            throw new IllegalStateException("Failed to read performance seed for year " + year, e);
-        }
-    }
-
-    private Performance toEntity(SeedPerformance source) {
+    private Performance toEntity(KopisPerformance source) {
         LocalDate start = LocalDate.parse(source.startDate(), SEED_DATE);
         LocalDate end = LocalDate.parse(source.endDate(), SEED_DATE);
         Performance entity = Performance.builder()
-            .kopisId(source.kopisId()).genre(source.genre()).title(source.title())
+            .kopisId(source.id()).genre(source.genre()).title(source.title())
             .startDate(LocalDateTime.of(start, LocalTime.MIN))
             .endDate(LocalDateTime.of(end, LocalTime.MAX))
             .location(source.location()).cast(source.cast()).crew(source.crew())
@@ -88,13 +88,5 @@ public class PerformanceImportService {
         return PerformanceState.ONGOING;
     }
 
-    public record ImportResult(int scanned, int rock, int saved, int updated) { }
-
-    private record SeedPerformance(
-        String kopisId, String genre, String title, String startDate, String endDate,
-        String location, List<String> cast, List<String> crew, String runtime, String age,
-        List<String> productionCompany, List<String> agency, List<String> host,
-        List<String> organizer, List<String> price, String poster, String visit,
-        List<String> time, List<String> images
-    ) { }
+    public record ImportResult(int scanned, int matched, int saved, int updated) { }
 }
