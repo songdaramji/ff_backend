@@ -23,6 +23,8 @@ import org.xml.sax.InputSource;
 @RequiredArgsConstructor
 public class KopisClient {
     private static final String BASE_URL = "https://kopis.or.kr/openApi/restful";
+    private static final String TARGET_KEYWORD = "페스티벌";
+    private static final String TARGET_GENRE = "대중음악";
     private static final DateTimeFormatter QUERY_DATE = DateTimeFormatter.ofPattern("yyyyMMdd");
 
     @Qualifier("oAuthRestClient")
@@ -30,12 +32,6 @@ public class KopisClient {
 
     @Value("${app.performance-import.kopis-service-key:}")
     private String serviceKey;
-
-    @Value("${app.performance-import.keyword:페스티벌}")
-    private String keyword;
-
-    @Value("${app.performance-import.genre:대중음악}")
-    private String genre;
 
     public List<String> findMatchingIds(LocalDate from, LocalDate to) {
         List<String> ids = new ArrayList<>();
@@ -46,6 +42,7 @@ public class KopisClient {
                 .queryParam("eddate", to.format(QUERY_DATE))
                 .queryParam("cpage", page)
                 .queryParam("rows", 100)
+                .queryParam("shprfnm", TARGET_KEYWORD)
                 .build().encode().toUri();
             String xml = restClient.get().uri(uri).retrieve().body(String.class);
             Document document = parse(xml);
@@ -55,7 +52,7 @@ public class KopisClient {
             for (int i = 0; i < performances.getLength(); i++) {
                 Element performance = (Element) performances.item(i);
                 String title = text(performance, "prfnm");
-                if (genre.equals(text(performance, "genrenm")) && title.contains(keyword)) {
+                if (TARGET_GENRE.equals(text(performance, "genrenm")) && title.contains(TARGET_KEYWORD)) {
                     ids.add(text(performance, "mt20id"));
                 }
             }
