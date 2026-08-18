@@ -46,7 +46,6 @@ public class KopisClient {
                 .queryParam("eddate", to.format(QUERY_DATE))
                 .queryParam("cpage", page)
                 .queryParam("rows", 100)
-                .queryParam("shprfnm", keyword)
                 .build().encode().toUri();
             String xml = restClient.get().uri(uri).retrieve().body(String.class);
             Document document = parse(xml);
@@ -55,7 +54,8 @@ public class KopisClient {
             if (performances.getLength() == 0) break;
             for (int i = 0; i < performances.getLength(); i++) {
                 Element performance = (Element) performances.item(i);
-                if (genre.equals(text(performance, "genrenm"))) {
+                String title = text(performance, "prfnm");
+                if (genre.equals(text(performance, "genrenm")) && title.contains(keyword)) {
                     ids.add(text(performance, "mt20id"));
                 }
             }
