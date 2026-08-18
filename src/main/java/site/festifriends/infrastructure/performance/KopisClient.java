@@ -2,6 +2,8 @@ package site.festifriends.infrastructure.performance;
 
 import java.io.StringReader;
 import java.net.URI;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -13,7 +15,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClient;
-import org.springframework.web.util.UriComponentsBuilder;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -36,14 +37,13 @@ public class KopisClient {
     public List<String> findMatchingIds(LocalDate from, LocalDate to) {
         List<String> ids = new ArrayList<>();
         for (int page = 1; ; page++) {
-            URI uri = UriComponentsBuilder.fromUriString(BASE_URL + "/pblprfr")
-                .queryParam("service", serviceKey)
-                .queryParam("stdate", from.format(QUERY_DATE))
-                .queryParam("eddate", to.format(QUERY_DATE))
-                .queryParam("cpage", page)
-                .queryParam("rows", 100)
-                .queryParam("shprfnm", TARGET_KEYWORD)
-                .build().encode().toUri();
+            URI uri = URI.create(BASE_URL + "/pblprfr"
+                + "?service=" + encode(serviceKey)
+                + "&stdate=" + from.format(QUERY_DATE)
+                + "&eddate=" + to.format(QUERY_DATE)
+                + "&cpage=" + page
+                + "&rows=100"
+                + "&shprfnm=" + encode(TARGET_KEYWORD));
             String xml = restClient.get().uri(uri).retrieve().body(String.class);
             Document document = parse(xml);
             assertNormalResponse(document);
@@ -77,6 +77,10 @@ public class KopisClient {
     }
 
     public boolean configured() { return serviceKey != null && !serviceKey.isBlank(); }
+
+    private String encode(String value) {
+        return URLEncoder.encode(value, StandardCharsets.UTF_8);
+    }
 
     private void assertNormalResponse(Document document) {
         NodeList codes = document.getElementsByTagName("returncode");
